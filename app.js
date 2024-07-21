@@ -1,12 +1,14 @@
-//pega os valores digitados e os adiciona em variaveis
-let quantNum = parseInt(document.querySelector('#quantidade').value);
-let inicio = parseInt(document.querySelector('#de').value);
-let fim = parseInt(document.querySelector('#ate').value);
-let numSorteados = [];
-let numSorteado
+
 
 //função que determina o sorteio dos numeros de acordo com os paramentros
 function sortear(){
+
+    //pega os valores digitados e os adiciona em variaveis
+    let quantNum = parseInt(document.querySelector('#quantidade').value);
+    let inicio = parseInt(document.querySelector('#de').value);
+    let fim = parseInt(document.querySelector('#ate').value);
+    let numSorteados = [];
+    let numSorteado
     for(i = 1; i <= quantNum; i++){
 
         if (inicio < fim){
