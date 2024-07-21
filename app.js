@@ -5,8 +5,13 @@ function sortear(){
     let quantNum = parseInt(document.querySelector('#quantidade').value);
     let inicio = parseInt(document.querySelector('#de').value);
     let fim = parseInt(document.querySelector('#ate').value);
+
+    //variaveis necessarias para guardar os numeros sorteados
     let numSorteados = [];
     let numSorteado
+
+    //Variavel para mandar o resultado para o Front
+    let resultado = document.querySelector('#resultado')
 
     //for que percorre a quantidade de numeros a sere sorteados
     for(i = 1; i <= quantNum; i++){
@@ -20,9 +25,9 @@ function sortear(){
             numSorteado = 0;
         }
         else{
-            console.log('Intervalo invalido')
+            resultado.innerHTML = '<label class="texto__paragrafo">Intervalo invalido</label>'
         }
         
     }
-    console.log(numSorteados)
+    resultado.innerHTML = `<label class="texto__paragrafo">Números sorteados:  ${numSorteados} </label>`
 }
