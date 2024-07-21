@@ -1,5 +1,3 @@
-
-
 //função que determina o sorteio dos numeros de acordo com os paramentros
 function sortear(){
 
@@ -9,6 +7,8 @@ function sortear(){
     let fim = parseInt(document.querySelector('#ate').value);
     let numSorteados = [];
     let numSorteado
+
+    //for que percorre a quantidade de numeros a sere sorteados
     for(i = 1; i <= quantNum; i++){
 
         if (inicio < fim){
