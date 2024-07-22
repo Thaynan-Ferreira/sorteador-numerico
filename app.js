@@ -1,3 +1,9 @@
+function limpaCampo(){
+    document.querySelector('#quantidade').value = '';
+    document.querySelector('#de').value = '';
+    document.querySelector('#ate').value = '';
+}
+
 //função que determina o sorteio dos numeros de acordo com os paramentros
 function sortear(){
 
@@ -30,4 +36,6 @@ function sortear(){
         
     }
     resultado.innerHTML = `<label class="texto__paragrafo">Números sorteados:  ${numSorteados} </label>`
+
+    limpaCampo();
 }
