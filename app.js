@@ -4,6 +4,11 @@ let reinicio = document.querySelector('#btn-reiniciar')
 //Variavel para mandar o resultado para o Front
 let resultado = document.querySelector('#resultado')
 
+//função que sorteia um numero
+function sorteador(inicio, fim){
+    //formula que sorteia um numero dentro do intervalo especificado
+    return Math.floor(Math.random() * (fim - inicio + 1)) + inicio;
+}
 //função que limpa os campos e desativa novamente o botão de reinicio
 function limpaCampo(){
     document.querySelector('#quantidade').value = '';
@@ -31,9 +36,12 @@ function sortear(){
     for(i = 1; i <= quantNum; i++){
 
         if (inicio < fim){
-            //formula que sorteia um numero dentro do intervalo especificado
-            numSorteado = Math.floor(Math.random() * (fim - inicio + 1)) + inicio;
+            
+            numSorteado = sorteador(inicio, fim);
 
+            while(numSorteados.includes(numSorteado)){
+                numSorteado = sorteador(inicio, fim);
+            }
             console.log(numSorteado);
             numSorteados.push(numSorteado);
             numSorteado = 0;
